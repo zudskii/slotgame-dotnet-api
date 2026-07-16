@@ -4,11 +4,20 @@ using SlotGame.Core.Config;
 namespace SlotGame.Api.Dtos;
 
 
-public sealed record SpinRequest([property: Range(typeof(decimal), "0.10", "500")]
+public sealed record SpinRequest(
+    [param: Range(typeof(decimal), "0.10", "500")]
     decimal BetAmount,
-    
-    [property: Required]
-    Guid IdempotencyKey);
+
+    [param: NotEmptyGuid]
+    Guid IdempotencyKey
+);
+public sealed class NotEmptyGuidAttribute : ValidationAttribute
+{
+    public override bool IsValid(object? value)
+    {
+        return value is Guid guid && guid != Guid.Empty;
+    }
+}
 
 public sealed record SpinResponse(
     string[][] Grid,

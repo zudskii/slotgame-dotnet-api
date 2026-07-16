@@ -1,1 +1,3 @@
 .env
+SlotGame.Client/node_modules/
+SlotGame.Client/dist/

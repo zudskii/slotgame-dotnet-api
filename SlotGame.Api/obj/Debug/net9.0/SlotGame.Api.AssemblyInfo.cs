@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SlotGame.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4c4198908ea68642044e093877ba64d69aec51b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SlotGame.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SlotGame.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,403 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-rajdhani), var(--font-inter), sans-serif;
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: dark;
+  /* casino brand palette */
+  --gold: #e6b422;
+  --gold-hi: #fff6cf;
+  --gold-dark: #a9781a;
+  --felt: #0b1f18;
+  --wine: #7c1327;
+
+  --background: oklch(0.18 0.03 160);
+  --foreground: oklch(0.96 0.02 90);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ============================================================
+   chajma.bet — casino cabinet styling + animations
+   ============================================================ */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Cabinet chrome — brass frame around the whole machine */
+.cabinet {
+  background:
+    linear-gradient(180deg, rgba(30, 24, 16, 0.96), rgba(10, 8, 6, 0.98));
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 0 0 2px rgba(230, 180, 34, 0.5),
+    0 0 0 5px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(230, 180, 34, 0.15),
+    0 30px 60px -20px rgba(0, 0, 0, 0.8);
+  position: relative;
+}
+.cabinet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(140deg, #fff6cf, #e6b422 40%, #7a5810 60%, #e6b422 85%, #fff6cf);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* Reel window frame */
+.reel-frame {
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(230, 180, 34, 0.12), transparent 60%),
+    linear-gradient(180deg, #1a130b, #0a0806);
+  box-shadow:
+    inset 0 0 0 3px rgba(230, 180, 34, 0.55),
+    inset 0 0 24px rgba(0, 0, 0, 0.9);
+}
+
+.reel-cell {
+  background: linear-gradient(180deg, #241d13, #14100a);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Spinning reels: vertical motion blur illusion */
+.reel-cell-spinning {
+  animation: reel-blur 0.12s linear infinite;
+}
+@keyframes reel-blur {
+  0% { transform: translateY(-4%); }
+  50% { transform: translateY(4%); }
+  100% { transform: translateY(-4%); }
+}
+
+/* Settle bounce when a reel stops */
+.reel-cell-settle {
+  animation: reel-settle 0.36s cubic-bezier(0.22, 1.4, 0.4, 1) both;
+}
+@keyframes reel-settle {
+  0% { transform: translateY(-22%); filter: brightness(0.8); }
+  60% { transform: translateY(6%); }
+  100% { transform: translateY(0); filter: brightness(1); }
+}
+
+/* Winning cell pulse */
+.reel-cell-win {
+  animation: win-pulse 0.85s ease-in-out infinite;
+  z-index: 5;
+}
+@keyframes win-pulse {
+  0%, 100% {
+    transform: scale(1);
+    background: linear-gradient(180deg, #3a2c12, #241a0c);
+  }
+  50% {
+    transform: scale(1.06);
+    background: linear-gradient(180deg, #6b4e14, #4a350d);
+  }
+}
+
+/* Big round SPIN button */
+.spin-button {
+  background:
+    radial-gradient(circle at 35% 30%, #ffe89a, #e6b422 45%, #a9781a 80%, #6e4d0e);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(230, 180, 34, 0.35);
+  border: 2px solid rgba(255, 246, 207, 0.5);
+  transition: transform 0.12s ease, box-shadow 0.2s ease;
+}
+.spin-button:hover:not(:disabled) {
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(230, 180, 34, 0.6);
+}
+.spin-button:active:not(:disabled) {
+  transform: scale(0.94);
+}
+.spin-button:disabled {
+  opacity: 0.7;
+}
+
+/* Wine/brass cabinet action button (login) */
+.cabinet-button {
+  background: linear-gradient(180deg, #a11832, #6e0f22);
+  border: 1px solid rgba(230, 180, 34, 0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.12s ease, filter 0.2s ease;
+}
+.cabinet-button:hover:not(:disabled) {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+.cabinet-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+/* Logo pulsing glow */
+.logo-glow::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 180, 34, 0.35), transparent 65%);
+  animation: logo-breathe 3s ease-in-out infinite;
+  z-index: -1;
+}
+@keyframes logo-breathe {
+  0%, 100% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Background vignette */
+.bg-vignette {
+  background: radial-gradient(120% 90% at 50% 40%, transparent 40%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* Big win overlay */
+.big-win-pop {
+  animation: big-win-pop 0.5s cubic-bezier(0.18, 1.5, 0.4, 1) both;
+}
+@keyframes big-win-pop {
+  0% { transform: scale(0.3) rotate(-6deg); opacity: 0; }
+  60% { transform: scale(1.12) rotate(2deg); }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+
+/* Falling coins */
+.coin {
+  animation-name: coin-fall;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+@keyframes coin-fall {
+  0% { transform: translateY(-10%) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(560%) rotate(540deg); opacity: 0; }
+}
+
+/* ============================================================
+   Preloader (Amusnet / EGT-style splash)
+   ============================================================ */
+
+/* slowly rotating golden god-rays behind the logo */
+.loader-rays {
+  background: conic-gradient(
+    from 0deg,
+    rgba(230, 180, 34, 0.14) 0deg,
+    transparent 18deg,
+    transparent 30deg,
+    rgba(230, 180, 34, 0.14) 48deg,
+    transparent 60deg
+  );
+  mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 62%);
+  -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 0%, transparent 62%);
+  animation: rays-spin 24s linear infinite;
+}
+@keyframes rays-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* symbol ring rotation (children counter-rotate inline) */
+.loader-ring {
+  animation: ring-spin 8s linear infinite;
+}
+@keyframes ring-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* progress bar track + fill */
+.loader-track {
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow:
+    inset 0 0 0 1.5px rgba(230, 180, 34, 0.4),
+    inset 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+.loader-fill {
+  background: linear-gradient(90deg, #a9781a, #f2c53d 45%, #fff6cf 55%, #f2c53d 65%, #a9781a);
+  background-size: 200% 100%;
+  box-shadow: 0 0 12px rgba(242, 197, 61, 0.7);
+  animation: fill-shimmer 1.4s linear infinite;
+}
+@keyframes fill-shimmer {
+  to { background-position: 200% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel-cell-spinning,
+  .reel-cell-win,
+  .logo-glow::after,
+  .coin,
+  .loader-rays,
+  .loader-ring,
+  .loader-fill,
+  .big-win-pop { animation: none !important; }
+}

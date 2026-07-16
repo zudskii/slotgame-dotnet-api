@@ -14,6 +14,7 @@ COPY SlotGame.Infrastructure/ SlotGame.Infrastructure/
 COPY SlotGame.Api/ SlotGame.Api/
 RUN dotnet publish SlotGame.Api/SlotGame.Api.csproj -c Release -o /app/publish
 
+
 # --- Runtime stage ---
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
