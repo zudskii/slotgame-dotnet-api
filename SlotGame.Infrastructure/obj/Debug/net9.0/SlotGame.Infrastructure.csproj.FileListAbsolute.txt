@@ -15,3 +15,4 @@ C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\refin
 C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.pdb
 C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.genruntimeconfig.cache
 C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\ref\SlotGame.Infrastructure.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.sourcelink.json

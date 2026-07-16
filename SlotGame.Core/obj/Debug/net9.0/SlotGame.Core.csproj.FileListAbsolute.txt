@@ -9,3 +9,4 @@ C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.d
 C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\refint\SlotGame.Core.dll
 C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.pdb
 C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\ref\SlotGame.Core.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.sourcelink.json
