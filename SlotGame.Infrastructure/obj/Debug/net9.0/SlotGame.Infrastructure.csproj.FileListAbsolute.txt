@@ -1,0 +1,17 @@
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\bin\Debug\net9.0\SlotGame.Infrastructure.deps.json
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\bin\Debug\net9.0\SlotGame.Infrastructure.runtimeconfig.json
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\bin\Debug\net9.0\SlotGame.Infrastructure.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\bin\Debug\net9.0\SlotGame.Infrastructure.pdb
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\bin\Debug\net9.0\SlotGame.Core.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\bin\Debug\net9.0\SlotGame.Core.pdb
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.AssemblyInfo.cs
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.D770CF6E.Up2Date
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\refint\SlotGame.Infrastructure.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.pdb
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\SlotGame.Infrastructure.genruntimeconfig.cache
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Infrastructure\obj\Debug\net9.0\ref\SlotGame.Infrastructure.dll

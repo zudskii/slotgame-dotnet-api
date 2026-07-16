@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  # --- Fast job: build + unit tests, ყოველ push/PR-ზე, ~30 წამი ---
+  build-and-unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore
+        run: dotnet restore SlotGame.sln
+
+      - name: Build
+        run: dotnet build SlotGame.sln --no-restore --configuration Release
+
+      - name: Unit Tests (fast — SpinEngine logic, RTP regression)
+        run: dotnet test SlotGame.Tests --no-build --configuration Release --logger "trx;LogFileName=unit-tests.trx"
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: '**/unit-tests.trx'
+
+  # --- Slow job: integration tests real PostgreSQL-ზე, parallel-ად fast job-თან ---
+  integration-test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: slotuser
+          POSTGRES_PASSWORD: ${{ secrets.TEST_DB_PASSWORD }}
+          POSTGRES_DB: SlotGame
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore
+        run: dotnet restore SlotGame.sln
+
+      - name: Apply migrations
+        run: |
+          dotnet tool install --global dotnet-ef
+          dotnet ef database update --project SlotGame.Infrastructure --startup-project SlotGame.Api
+        env:
+          ConnectionStrings__SlotGameDb: "Host=localhost;Database=SlotGame;Username=slotuser;Password=${{ secrets.TEST_DB_PASSWORD }};Port=5432"
+
+      - name: Integration Tests
+        run: dotnet test SlotGame.IntegrationTests --configuration Release --logger "trx;LogFileName=integration-tests.trx"
+        env:
+          SLOTGAME_TEST_DB_CONNECTION: "Host=localhost;Database=SlotGame;Username=slotuser;Password=${{ secrets.TEST_DB_PASSWORD }};Port=5432"
+
+  # --- Docker build validation — არ push-avს registry-ში, მხოლოდ ამოწმებს build-დება თუ არა ---
+  docker-build-check:
+    runs-on: ubuntu-latest
+    needs: build-and-unit-test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -f SlotGame.Api/Dockerfile -t slotgame-api:ci-check .

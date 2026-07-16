@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SlotGame.Simulator/1.0.0": {
+        "dependencies": {
+          "SlotGame.Core": "1.0.0"
+        },
+        "runtime": {
+          "SlotGame.Simulator.dll": {}
+        }
+      },
+      "SlotGame.Core/1.0.0": {
+        "runtime": {
+          "SlotGame.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SlotGame.Simulator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SlotGame.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

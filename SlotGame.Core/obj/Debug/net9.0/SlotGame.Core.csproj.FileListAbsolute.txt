@@ -1,0 +1,11 @@
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\bin\Debug\net9.0\SlotGame.Core.deps.json
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\bin\Debug\net9.0\SlotGame.Core.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\bin\Debug\net9.0\SlotGame.Core.pdb
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.AssemblyInfoInputs.cache
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.AssemblyInfo.cs
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.csproj.CoreCompileInputs.cache
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\refint\SlotGame.Core.dll
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\SlotGame.Core.pdb
+C:\Users\zudskyy\Desktop\SlotGame\SlotGame.Core\obj\Debug\net9.0\ref\SlotGame.Core.dll

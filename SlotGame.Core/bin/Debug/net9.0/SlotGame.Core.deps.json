@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SlotGame.Core/1.0.0": {
+        "runtime": {
+          "SlotGame.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SlotGame.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,244 @@
+# 🎰 SlotGame .NET API
+
+A production-style Slot Machine backend built with **ASP.NET Core 9** and **PostgreSQL**.
+
+The project simulates a real online casino slot game with secure random number generation, JWT authentication, transactional balance updates, idempotent requests, and Docker support.
+
+---
+
+## 🚀 Features
+
+- 🎰 Slot machine game engine
+- 🎲 Cryptographically secure RNG
+- 💰 Player balance management
+- 🏆 Paylines & Paytable evaluation
+- 🔒 JWT Authentication
+- 🔁 Idempotent Spin API
+- 🗄️ PostgreSQL + Entity Framework Core
+- 🐳 Docker & Docker Compose
+- 📄 Swagger / OpenAPI
+- 🧪 Clean Architecture
+- ⚡ Dependency Injection
+- 📦 Entity Framework Migrations
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Description |
+|------------|-------------|
+| ASP.NET Core 9 | Web API |
+| C# | Backend Language |
+| Entity Framework Core | ORM |
+| PostgreSQL | Database |
+| Docker | Containerization |
+| Docker Compose | Local Development |
+| JWT | Authentication |
+| Swagger | API Documentation |
+
+---
+
+# 📂 Project Structure
+
+```
+SlotGame
+│
+├── SlotGame.Api              # ASP.NET Core Web API
+├── SlotGame.Core             # Game Engine & Business Logic
+├── SlotGame.Infrastructure   # Database & EF Core
+```
+
+---
+
+# ⚙️ Getting Started
+
+## Clone repository
+
+```bash
+git clone https://github.com/your-username/slotgame-dotnet-api.git
+cd slotgame-dotnet-api
+```
+
+---
+
+## Configure Environment
+
+Create a `.env` file in the project root.
+
+```env
+POSTGRES_USER=slotuser
+POSTGRES_PASSWORD=your_password
+POSTGRES_DB=SlotGame
+
+JWT_SIGNING_KEY=your_secret_key
+JWT_ISSUER=SlotGame.Api
+JWT_AUDIENCE=SlotGame.Client
+```
+
+---
+
+## Run with Docker
+
+```bash
+docker compose up --build
+```
+
+The API will be available at:
+
+```
+http://localhost:8080
+```
+
+Swagger:
+
+```
+http://localhost:8080/swagger
+```
+
+---
+
+# Database Migration
+
+Create migration
+
+```bash
+dotnet ef migrations add InitialCreate \
+--project SlotGame.Infrastructure \
+--startup-project SlotGame.Api
+```
+
+Update database
+
+```bash
+dotnet ef database update \
+--project SlotGame.Infrastructure \
+--startup-project SlotGame.Api
+```
+
+---
+
+# Authentication
+
+Login endpoint
+
+```
+POST /api/Auth/login
+```
+
+Example Request
+
+```json
+{
+    "playerId": "YOUR_PLAYER_ID"
+}
+```
+
+Response
+
+```json
+{
+    "token": "JWT_TOKEN",
+    "expiresAt": "2026-01-01T12:00:00Z"
+}
+```
+
+---
+
+# Spin API
+
+Endpoint
+
+```
+POST /api/Spin
+```
+
+Headers
+
+```
+Authorization: Bearer YOUR_TOKEN
+```
+
+Request
+
+```json
+{
+    "betAmount": 10,
+    "idempotencyKey": "GUID"
+}
+```
+
+Example Response
+
+```json
+{
+    "grid": [],
+    "betAmount": 10,
+    "totalWin": 25,
+    "winningLines": [],
+    "newBalance": 115
+}
+```
+
+---
+
+# Architecture
+
+```
+Client
+    │
+    ▼
+Controllers
+    │
+    ▼
+Services
+    │
+    ▼
+Game Engine
+    │
+    ▼
+Entity Framework Core
+    │
+    ▼
+PostgreSQL
+```
+
+---
+
+# Security
+
+- JWT Authentication
+- Idempotency Protection
+- Cryptographically Secure RNG
+- Transactional Database Operations
+- Request Validation
+
+---
+
+# Future Improvements
+
+- Unit Tests
+- Integration Tests
+- Redis Caching
+- Rate Limiting
+- Serilog Logging
+- Health Checks
+- CI/CD Pipeline
+- PixiJS Frontend
+- RTP Simulation Tools
+- Admin Dashboard
+
+---
+
+# Author
+
+**Zudskii**
+
+Backend Developer
+
+GitHub: https://github.com/zudskii
+
+---
+
+## License
+
+This project is intended for educational and portfolio purposes.
